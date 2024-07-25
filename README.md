@@ -1,7 +1,7 @@
 # Simply currency converter
 
 ## Demo 
-(https://mariuszkalinowski.github.io/currency-react/)
+https://mariuszkalinowski.github.io/currency-react/
 
 ![Show how it works](./src/images/works.gif)
 ## Discription 
