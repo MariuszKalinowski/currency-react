@@ -1,10 +1,14 @@
 import "./style.css"
 
-const Result = ({ result, amount, selectedCurrency, forResult }) => (
+const Result = ({ result }) => (
     <div className="form__result">
 
-        {result !== null ? <p>{amount} PLN = <strong>{result.toFixed(2)} {selectedCurrency.short}</strong> </p> : null}
-
+        {result ? (
+            <p>
+                {result.amount} PLN = <strong>
+                    {result.result.toFixed(2)} {result.toCurrency}</strong>
+            </p>
+        ) : null}
 
     </div>
 
