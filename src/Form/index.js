@@ -18,17 +18,14 @@ const Form = () => {
     const onFormSubmit = (event) => {
         event.preventDefault();
         if (selectedCurrency) {
-            setResult(amount / selectedCurrency.rate)
+            setResult({
+                amount,
+                toCurrency: selectedCurrency.short,
+                result: amount / selectedCurrency.rate,
+            });
         }
     };
-    const forResult = {
-        setAmount,
-        onSelectCurr,
-        setResult,
-    }
-
-
-
+ 
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
@@ -54,7 +51,7 @@ const Form = () => {
                 </p>
             </fieldset>
             <button className="form__button"> Przelicz!</button>
-            <Result onFormSubmit={onFormSubmit} forResult={forResult} result={result} amount={amount} selectedCurrency={selectedCurrency} />
+            <Result onFormSubmit={onFormSubmit} result={result} amount={amount} selectedCurrency={selectedCurrency} />
         </form>
     );
 };
