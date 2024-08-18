@@ -2,6 +2,7 @@ import "./style.css";
 import Result from "./Result"
 import { useState } from "react";
 import { currencies } from "./currencies"
+import Data from "./Data"
 
 
 
@@ -25,12 +26,14 @@ const Form = () => {
             });
         }
     };
- 
+
+
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
                 <legend className="form__legend">Kalkulator walut</legend>
                 <p>
+                    <Data />
                     <label><span className="form__labelText"> Wpisz kwotę w PLN*</span>
                         <input value={amount} onChange={onSetAmount} type="number" min="0,01" step="0.01" className="form__input" required />
                     </label>
