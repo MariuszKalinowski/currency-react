@@ -51,7 +51,18 @@
     width: 100%;
     border-radius: 5px;
     font-size: 20px;
+    transition: 0.4s;
+    border: none;
     
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 30%);  
+}
+
+.form__button:active {
+    font-size: 21px;
+    background-color: hsl(180, 100%, 34%);  
 }
 
 .form__legend {
