@@ -32,12 +32,10 @@ const Form = () => {
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
                 <legend className="form__legend">Kalkulator walut</legend>
-                <p>
-                    <Data />
-                    <label><span className="form__labelText"> Wpisz kwotę w PLN*</span>
-                        <input value={amount} onChange={onSetAmount} type="number" min="0,01" step="0.01" className="form__input" required />
-                    </label>
-                </p>
+                <Data />
+                <label><span className="form__labelText"> Wpisz kwotę w PLN*</span>
+                    <input value={amount} onChange={onSetAmount} type="number" min="0,01" step="0.01" className="form__input" required />
+                </label>
                 <p>
                     <label className="form__label"> <span className="form__labelText">Wybierz walutę</span>
                         <select className="form__select" value={curr} onChange={onSelectCurr}>
@@ -55,6 +53,8 @@ const Form = () => {
             </fieldset>
             <button className="form__button"> Przelicz!</button>
             <Result onFormSubmit={onFormSubmit} result={result} amount={amount} selectedCurrency={selectedCurrency} />
+            <div className="form__bottomText">Kursy pochodzą ze strony nbp.pl z Tabeli nr 162/A/NBP/2024 z dnia 2024-08-21
+            </div>
         </form>
     );
 };
